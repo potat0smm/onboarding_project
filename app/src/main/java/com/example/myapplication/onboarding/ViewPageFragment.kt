@@ -11,16 +11,27 @@ import com.example.myapplication.screen.FirstScreen
 import com.example.myapplication.screen.SecondScreen
 import com.example.myapplication.screen.ThirdScreen
 import com.example.onboarding.R
+import com.example.onboarding.databinding.FragmentViewPageBinding
 
+@Suppress("UNREACHABLE_CODE")
 class ViewPageFragment : Fragment() {
 
+
+
     @SuppressLint("MissingInflatedId")
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_view_page, container, false)
+
 
         val fragmentList = arrayListOf<Fragment>(
             FirstScreen(),
@@ -35,6 +46,4 @@ class ViewPageFragment : Fragment() {
 
         return view
     }
-
-
 }
